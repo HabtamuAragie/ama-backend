@@ -28,4 +28,5 @@ app.post("/payments/create", async (request, response) => {
 });
 
 // - Listen command
-exports.api = functions.https.onRequest(app);
+//exports.api = functions.https.onRequest(app);
+app.listen(2000, console.log("server running "));
