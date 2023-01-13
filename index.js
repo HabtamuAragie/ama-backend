@@ -6,6 +6,7 @@ const stripe = require("stripe")(
 );
 // - App config
 const app = express();
+const PORT = process.env.PORT || 4000;
 // - Middlewares
 app.use(cors());
 app.use(express.json());
@@ -29,4 +30,4 @@ app.post("/payments/create", async (request, response) => {
 
 // - Listen command
 //exports.api = functions.https.onRequest(app);
-app.listen(5000, console.log("server running "));
+app.listen(PORT, console.log("server running "));
